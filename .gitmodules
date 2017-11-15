@@ -1,9 +1,0 @@
-[submodule "hugo-base-theme"]
-	path = hugo-base-theme
-	url = https://github.com/crakjie/hugo-base-theme
-[submodule "themes/hugo-nuo"]
-	path = themes/hugo-nuo
-	url = https://github.com/crakjie/hugo-base-theme.git
-[submodule "themes/hugo-base-theme"]
-	path = themes/hugo-base-theme
-	url = https://github.com/crakjie/hugo-base-theme.git
