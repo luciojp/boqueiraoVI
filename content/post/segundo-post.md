@@ -2,9 +2,9 @@
 charset = "UTF-8"
 date = 2014-10-13T20:07:30Z
 draft = false
-title = "Observando o histórico de boqueirao,eh possivel inferir um certo ciclo no nivel das aguas? Se sim, quando deve voltar a subir?"
+title = "Observando o historico de boqueirao,eh possivel inferir um certo ciclo no nivel das aguas? Se sim, quando deve voltar a subir?"
 
-weight = 1
+weight = 0.8
 
 +++
 
@@ -29,7 +29,7 @@ weight = 1
             }
         },
 
-    "width": 1000,
+    "width": 700,
   "mark": "line",
 "encoding": {
   "x": {
@@ -57,7 +57,7 @@ a 2004 se repetir, estamos pertos do fim desta estiagem atual.
 Outra coisa interessante a se observar eh que ha um padrao na epoca em que o acude de 
 boqueirao enche rapidamente, que e do final de um ano indo pro inicio do proximo. 
 Ficando intrigado com isso, fui atras e encontrei uma resposta climatica que eh ciclica,
-o fenomeno “La nina” (a crianca), que um dos seus efeitos eh na epoca de dezembro a 
+o fenomeno 'La nina' (a crianca), que um dos seus efeitos eh na epoca de dezembro a 
 fevereiro um grande aumento no volume de chuvas na regiao nordeste, explicando o rapido
 enchimento do volume de boqueirao. E este fenomeno esta previsto para acontecer entre 
 2018 e 2019.

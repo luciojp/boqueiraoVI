@@ -1,6 +1,6 @@
 +++
 charset = "UTF-8"
-date = 2014-10-13T20:07:19Z
+date = 2014-10-13T20:07:45Z
 draft = false
 title = "O historico dos niveis de boqueirao"
 
@@ -13,5 +13,5 @@ afetam milhoes de pessoas e animais. Durante essa epoca, alguns acudes chagam ao
 secarem completamente ou ficarem bem proximos disso, que foi o caso do acude de boqueirao, 
 que abastece 7 cidades da Paraiba. 
 
-E baseado nisso, farei algumas análises sobre o nivel das aguas deste acude.
+E baseado nisso, farei algumas analises sobre o nivel das aguas deste acude.
 

@@ -6,28 +6,28 @@
     <description>Recent content in Posts on Acude de Boqueirao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 13 Oct 2014 20:07:30 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Oct 2014 20:07:45 +0000</lastBuildDate>
     
 	<atom:link href="https://luciojp.github.io/boqueiraoVI/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Observando o hist�rico de boqueirao,eh possivel inferir um certo ciclo no nivel das aguas? Se sim, quando deve voltar a subir?</title>
+      <title>O historico dos niveis de boqueirao</title>
+      <link>https://luciojp.github.io/boqueiraoVI/post/primeiro-post/</link>
+      <pubDate>Mon, 13 Oct 2014 20:07:45 +0000</pubDate>
+      
+      <guid>https://luciojp.github.io/boqueiraoVI/post/primeiro-post/</guid>
+      <description>De tempos em tempos o nordeste passa por um grave problema, a seca. Sao anos de estiagem que afetam milhoes de pessoas e animais. Durante essa epoca, alguns acudes chagam ao ponto de secarem completamente ou ficarem bem proximos disso, que foi o caso do acude de boqueirao, que abastece 7 cidades da Paraiba.
+E baseado nisso, farei algumas analises sobre o nivel das aguas deste acude.</description>
+    </item>
+    
+    <item>
+      <title>Observando o historico de boqueirao,eh possivel inferir um certo ciclo no nivel das aguas? Se sim, quando deve voltar a subir?</title>
       <link>https://luciojp.github.io/boqueiraoVI/post/segundo-post/</link>
       <pubDate>Mon, 13 Oct 2014 20:07:30 +0000</pubDate>
       
       <guid>https://luciojp.github.io/boqueiraoVI/post/segundo-post/</guid>
-      <description>const spec = { &#34;$schema&#34;: &#34;https://vega.github.io/schema/vega-lite/v2.json&#34;, &#34;data&#34;: { &#34;url&#34;: &#34;https://api.insa.gov.br/reservatorios/12172/monitoramento&#34;, &#34;format&#34;: { &#34;type&#34;: &#34;json&#34;, &#34;property&#34;: &#34;volumes&#34;, &#34;parse&#34;: { &#34;DataInformacao&#34;: &#34;utc:&#39;%d/%m/%Y&#39;&#34; } } }, &#34;width&#34;: 1000, &#34;mark&#34;: &#34;line&#34;, &#34;encoding&#34;: { &#34;x&#34;: { &#34;timeUnit&#34;: &#34;yearmonth&#34;, &#34;field&#34;: &#34;DataInformacao&#34;, &#34;type&#34;: &#34;temporal&#34;, &#34;axis&#34;: {&#34;title&#34;: &#34;Anos&#34;} }, &#34;y&#34;: { &#34;aggregate&#34;: &#34;mean&#34;, &#34;field&#34;: &#34;VolumePercentual&#34;, &#34;type&#34;: &#34;quantitative&#34;, &#34;axis&#34;: {&#34;title&#34;: &#34;M�dia do volume (%)&#34;} } } }; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  Como nao temos informacoes de muitos anos anteriores a 1994, nao eh possivel afirmar com precisao se ha ou nao esse ciclo, porem, se o periodo da ultima grande estiagem de 1998 a 2004 se repetir, estamos pertos do fim desta estiagem atual.</description>
-    </item>
-    
-    <item>
-      <title>O historico dos niveis de boqueirao</title>
-      <link>https://luciojp.github.io/boqueiraoVI/post/primeiro-post/</link>
-      <pubDate>Mon, 13 Oct 2014 20:07:19 +0000</pubDate>
-      
-      <guid>https://luciojp.github.io/boqueiraoVI/post/primeiro-post/</guid>
-      <description>De tempos em tempos o nordeste passa por um grave problema, a seca. Sao anos de estiagem que afetam milhoes de pessoas e animais. Durante essa epoca, alguns acudes chagam ao ponto de secarem completamente ou ficarem bem proximos disso, que foi o caso do acude de boqueirao, que abastece 7 cidades da Paraiba.
-E baseado nisso, farei algumas an�lises sobre o nivel das aguas deste acude.</description>
+      <description>const spec = { &#34;$schema&#34;: &#34;https://vega.github.io/schema/vega-lite/v2.json&#34;, &#34;data&#34;: { &#34;url&#34;: &#34;https://api.insa.gov.br/reservatorios/12172/monitoramento&#34;, &#34;format&#34;: { &#34;type&#34;: &#34;json&#34;, &#34;property&#34;: &#34;volumes&#34;, &#34;parse&#34;: { &#34;DataInformacao&#34;: &#34;utc:&#39;%d/%m/%Y&#39;&#34; } } }, &#34;width&#34;: 700, &#34;mark&#34;: &#34;line&#34;, &#34;encoding&#34;: { &#34;x&#34;: { &#34;timeUnit&#34;: &#34;yearmonth&#34;, &#34;field&#34;: &#34;DataInformacao&#34;, &#34;type&#34;: &#34;temporal&#34;, &#34;axis&#34;: {&#34;title&#34;: &#34;Anos&#34;} }, &#34;y&#34;: { &#34;aggregate&#34;: &#34;mean&#34;, &#34;field&#34;: &#34;VolumePercentual&#34;, &#34;type&#34;: &#34;quantitative&#34;, &#34;axis&#34;: {&#34;title&#34;: &#34;M�dia do volume (%)&#34;} } } }; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  Como nao temos informacoes de muitos anos anteriores a 1994, nao eh possivel afirmar com precisao se ha ou nao esse ciclo, porem, se o periodo da ultima grande estiagem de 1998 a 2004 se repetir, estamos pertos do fim desta estiagem atual.</description>
     </item>
     
   </channel>
