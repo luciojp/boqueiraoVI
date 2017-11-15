@@ -73,88 +73,6 @@ que abastece 7 cidades da Paraiba.</p>
             <div class="row">
               <div class="col-md-6 col-md-offset-3 text-center">
                 
-                <h2>Quarto Post</h2>
-                <p class="lead">
-                    <div id="vis" width=300></div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.1/vega-lite.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc7/vega-embed.js"></script>
-<script>
-    const spec = {
-    "$schema": "https://vega.github.io/schema/vega-lite/v3.0.json",
-    "data": {
-        "url": "https://api.insa.gov.br/reservatorios/12172/monitoramento",
-        "format": {
-        "type": "json",
-        "property": "volumes",
-        "parse": {
-            "DataInformacao": "utc:'%d/%m/%Y'"
-                }
-            }
-        },
-  "mark": "bar",
-  "width": 400,
- "transform": [
-    {
-      "filter": {
-        "timeUnit": "year",
-        "field": "DataInformacao",
-        "range": [
-          1994,
-          2017
-        ]
-      }
-    },
-    {
-      "filter": {
-        "timeUnit": "month",
-        "field": "DataInformacao",
-        "range": [
-          6,
-          7
-        ]
-      }
-    }
-  ],
-  
-"encoding": {
-  "x": {
-    "timeUnit": "year",
-    "field": "DataInformacao",
-    "type": "temporal",
-    "axis": {"title": "Anos"}
-  },
-  "y": {
-    "aggregate": "mean",
-    "field": "VolumePercentual",
-    "type": "quantitative",
-    "axis": {"title": "Média do volume (%)"}
-  }
-}
-};
-    vegaEmbed('#vis', spec).catch(console.warn);
-</script>
-
-<p>Nao eh possivel observar semelhancas nos nivel da agua nos meses de junho e julho (epoca do Sao Joao) .</p>
-
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      
-      
-    
-
-    <div id="main">
-        
-        <div id="intro" class="counterpoint">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 text-center">
-                
                 <h2>Observando o historico de boqueirao,eh possivel inferir um certo ciclo no nivel das aguas? Se sim, quando deve voltar a subir?</h2>
                 <p class="lead">
                     <div id="vis" width=300></div>
@@ -220,7 +138,7 @@ enchimento do volume de boqueirao. E este fenomeno esta previsto para acontecer 
 
     <div id="main">
         
-        <div id="intro" class="point">
+        <div id="intro" class="counterpoint">
           <div class="container">
             <div class="row">
               <div class="col-md-6 col-md-offset-3 text-center">
