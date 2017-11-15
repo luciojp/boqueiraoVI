@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.30.2" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>my new web site</title>
+
+    
+    <link href="https://www.example.comcss/bootstrap-theme.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Arbutus+Slab&family=Cabin:600&family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    
+    <link href="https://www.example.comcss/HPstyles.css" rel="stylesheet">
+    <link href="https://www.example.comcss/hugofont.css" rel="stylesheet">
+    <link href="https://www.example.comcss/owl.carousel.css" rel="stylesheet">
+    <link href="https://www.example.comcss/owl.theme.default.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+  <body>
+
+
+    
+    <div id="top" class="header">
+      <div class="vert-text">
+        <a href="#intro"><img src="https://www.example.com/img/hugo.png" class="logo"></a>
+        <div class="siteTitle">my new web site</div>
+        <div class="description">I &lt;3 making web site</div>
+        <div class="buttonbox">
+       
+            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="icon-twitter"></i> <span class="network-name">twitter</span></a>
+        
+            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="icon-github"></i> <span class="network-name">github</span></a>
+        
+            <a href="" class="btn btn-default btn-lg"><i class="icon-linkedin"></i> <span class="network-name">linkedin</span></a>
+        
+        </div>
+      </div>
+    </div>
+    
+
+  
+
+    <div id="main">
+        
+        <div id="intro" class="counterpoint">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3 text-center">
+                
+                    <i class="lead-icon icon-pacman"></i>
+                
+                <h2>First</h2>
+                <p class="lead">
+                    <div id="vis" width=300></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.1/vega-lite.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc7/vega-embed.js"></script>
+<script>
+    const spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+    "data": {
+        "url": "https://api.insa.gov.br/reservatorios/12172/monitoramento",
+        "format": {
+        "type": "json",
+        "property": "volumes",
+        "parse": {
+            "DataInformacao": "utc:'%d/%m/%Y'"
+                }
+            }
+        },
+
+    "width": 500,
+    "height": 120,
+
+    "mark": {
+        "type": "area",
+        "interpolate": "monotone"
+    },
+    "selection": {
+      "brush": {"type": "interval", "encodings": ["x"]}
+    },
+    "encoding": {
+      "x": {
+        "timeUnit" : "monthyear",
+        "field": "DataInformacao",
+        "type": "temporal",
+        "axis": {"format": "%Y", "title" : "Volume percentual ao longo dos anos"}
+       },
+      "y": {
+        "field": "VolumePercentual",
+        "type": "quantitative",
+        "axis": {"tickCount": 30, "grid": false, "title": "Volume percentual"}
+         }
+       }
+     };
+    vegaEmbed('#vis', spec).catch(console.warn);
+</script>
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      
+      
+    
+
+    </div>
+
+        
+        <div id="action" class="call-to-action">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1 text-center">
+                <h1 style="padding-bottom:.5em;">Getting Started</h1>
+                <a href="https://github.com/spf13/hugo/releases" class="btn btn-lg btn-primary">Download <i class="icon-arrow-down"></i></a>
+                <a href="/overview/quickstart" style="color:white;font-weight:300;">Quickstart Guide</a>
+                <p>&nbsp;</p>
+                <h4>Using Homebrew?</h4>
+                <pre><code>brew install hugo</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <ul class="list-inline">
+            <li><a href="http://twitter.com/spf13" class="icon-twitter icon-2x"></a></li>
+            <li><a href="http://github.com/spf13/hugo" class="icon-octocat icon-2x"></a></li>
+        </ul>
+        <hr>
+        <p>Copyright &copy; Steve Francia 2013&ndash;2014</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="https://www.example.comjs/jquery-2.1.1.min.js"></script>
+<script src="https://www.example.comjs/owl.carousel.min.js"></script>
+
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+      || location.hostname == this.hostname) {
+
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+});
+$('.owl-carousel').owlCarousel({
+loop:true,
+margin:10,
+nav:true,
+autoplay:true,
+autoplayHoverPause:true,
+autoplayTimeout:3000,
+responsive:{
+    0:{
+        items:1
+    },
+    1000:{
+        items:3
+    },
+}
+})
+</script>
+
+
+</body>
+
+</html>
+
