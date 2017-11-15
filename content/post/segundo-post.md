@@ -4,7 +4,7 @@ date = 2014-10-13T20:07:30Z
 draft = false
 title = "Observando o historico de boqueirao,eh possivel inferir um certo ciclo no nivel das aguas? Se sim, quando deve voltar a subir?"
 
-weight = 0.8
+weight = 0.2
 
 +++
 
@@ -29,7 +29,7 @@ weight = 0.8
             }
         },
 
-    "width": 700,
+    "width": 500,
   "mark": "line",
 "encoding": {
   "x": {
