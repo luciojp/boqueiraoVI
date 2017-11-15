@@ -28,34 +28,12 @@ weight = 0.2
                 }
             }
         },
-  "mark": "bar",
-  "width": 400,
- "transform": [
-    {
-      "filter": {
-        "timeUnit": "year",
-        "field": "DataInformacao",
-        "range": [
-          1994,
-          2017
-        ]
-      }
-    },
-    {
-      "filter": {
-        "timeUnit": "month",
-        "field": "DataInformacao",
-        "range": [
-          6,
-          7
-        ]
-      }
-    }
-  ],
-  
+
+    "width": 500,
+  "mark": "line",
 "encoding": {
   "x": {
-    "timeUnit": "year",
+    "timeUnit": "yearmonth",
     "field": "DataInformacao",
     "type": "temporal",
     "axis": {"title": "Anos"}
@@ -67,9 +45,7 @@ weight = 0.2
     "axis": {"title": "Média do volume (%)"}
   }
 }
-
-}
-;
+};
   	vegaEmbed('#vis', spec).catch(console.warn);
 </script>
 
