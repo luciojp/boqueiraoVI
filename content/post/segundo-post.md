@@ -2,18 +2,13 @@
 charset = "UTF-8"
 date = 2014-10-13T20:07:30Z
 draft = false
-title = "O historico dos niveis de boqueirao"
+title = "Observando o histórico de boqueirao,eh possivel inferir um certo ciclo no nivel das aguas? Se sim, quando deve voltar a subir?"
 
 weight = 1
 
 +++
 
-De tempos em tempos o nordeste passa por um grave problema, a seca. Sao anos de estiagem que
-afetam milhões de pessoas e animais. Durante essa epoca, alguns acudes chagam ao ponto de 
-secarem completamente ou ficarem bem próximos disso, que foi o caso do acude de boqueirao, 
-que abastece 7 cidades da Paraiba. 
 
-E baseado nisso, farei algumas análises sobre 
 
 <div id="vis" width=300></div>
 
@@ -34,29 +29,36 @@ E baseado nisso, farei algumas análises sobre
             }
         },
 
-    "width": 500,
-    "height": 120,
-
-    "mark": {
-        "type": "area",
-        "interpolate": "monotone"
-    },
-    "selection": {
-      "brush": {"type": "interval", "encodings": ["x"]}
-    },
-    "encoding": {
-      "x": {
-        "timeUnit" : "monthyear",
-        "field": "DataInformacao",
-        "type": "temporal",
-        "axis": {"format": "%Y", "title" : "Volume percentual ao longo dos anos"}
-       },
-      "y": {
-        "field": "VolumePercentual",
-        "type": "quantitative",
-        "axis": {"tickCount": 30, "grid": false, "title": "Volume percentual"}
-         }
-       }
-     };
+    "width": 1000,
+  "mark": "line",
+"encoding": {
+  "x": {
+    "timeUnit": "yearmonth",
+    "field": "DataInformacao",
+    "type": "temporal",
+    "axis": {"title": "Anos"}
+  },
+  "y": {
+    "aggregate": "mean",
+    "field": "VolumePercentual",
+    "type": "quantitative",
+    "axis": {"title": "Média do volume (%)"}
+  }
+}
+};
   	vegaEmbed('#vis', spec).catch(console.warn);
 </script>
+
+
+Como nao temos informacoes de muitos anos anteriores a 1994, nao eh possivel afirmar com 
+precisao se ha ou nao esse ciclo, porem, se o periodo  da ultima grande estiagem  de 1998 
+a 2004 se repetir, estamos pertos do fim desta estiagem atual.
+ 
+Outra coisa interessante a se observar eh que ha um padrao na epoca em que o acude de 
+boqueirao enche rapidamente, que e do final de um ano indo pro inicio do proximo. 
+Ficando intrigado com isso, fui atras e encontrei uma resposta climatica que eh ciclica,
+o fenomeno “La nina” (a crianca), que um dos seus efeitos eh na epoca de dezembro a 
+fevereiro um grande aumento no volume de chuvas na regiao nordeste, explicando o rapido
+enchimento do volume de boqueirao. E este fenomeno esta previsto para acontecer entre 
+2018 e 2019.
+

@@ -47,16 +47,9 @@
             <div class="row">
               <div class="col-md-6 col-md-offset-3 text-center">
                 
-                <h2>O historico dos niveis de boqueirao</h2>
+                <h2>Observando o histï¿½rico de boqueirao,eh possivel inferir um certo ciclo no nivel das aguas? Se sim, quando deve voltar a subir?</h2>
                 <p class="lead">
-                    <p>De tempos em tempos o nordeste passa por um grave problema, a seca. Sao anos de estiagem que
-afetam milhões de pessoas e animais. Durante essa epoca, alguns acudes chagam ao ponto de
-secarem completamente ou ficarem bem próximos disso, que foi o caso do acude de boqueirao,
-que abastece 7 cidades da Paraiba.</p>
-
-<p>E baseado nisso, farei algumas análises sobre</p>
-
-<div id="vis" width=300></div>
+                    <div id="vis" width=300></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.1/vega-lite.js"></script>
@@ -75,32 +68,37 @@ que abastece 7 cidades da Paraiba.</p>
             }
         },
 
-    "width": 500,
-    "height": 120,
-
-    "mark": {
-        "type": "area",
-        "interpolate": "monotone"
-    },
-    "selection": {
-      "brush": {"type": "interval", "encodings": ["x"]}
-    },
-    "encoding": {
-      "x": {
-        "timeUnit" : "monthyear",
-        "field": "DataInformacao",
-        "type": "temporal",
-        "axis": {"format": "%Y", "title" : "Volume percentual ao longo dos anos"}
-       },
-      "y": {
-        "field": "VolumePercentual",
-        "type": "quantitative",
-        "axis": {"tickCount": 30, "grid": false, "title": "Volume percentual"}
-         }
-       }
-     };
+    "width": 1000,
+  "mark": "line",
+"encoding": {
+  "x": {
+    "timeUnit": "yearmonth",
+    "field": "DataInformacao",
+    "type": "temporal",
+    "axis": {"title": "Anos"}
+  },
+  "y": {
+    "aggregate": "mean",
+    "field": "VolumePercentual",
+    "type": "quantitative",
+    "axis": {"title": "Média do volume (%)"}
+  }
+}
+};
     vegaEmbed('#vis', spec).catch(console.warn);
 </script>
+
+<p>Como nao temos informacoes de muitos anos anteriores a 1994, nao eh possivel afirmar com
+precisao se ha ou nao esse ciclo, porem, se o periodo  da ultima grande estiagem  de 1998
+a 2004 se repetir, estamos pertos do fim desta estiagem atual.</p>
+
+<p>Outra coisa interessante a se observar eh que ha um padrao na epoca em que o acude de
+boqueirao enche rapidamente, que e do final de um ano indo pro inicio do proximo.
+Ficando intrigado com isso, fui atras e encontrei uma resposta climatica que eh ciclica,
+o fenomeno “La nina” (a crianca), que um dos seus efeitos eh na epoca de dezembro a
+fevereiro um grande aumento no volume de chuvas na regiao nordeste, explicando o rapido
+enchimento do volume de boqueirao. E este fenomeno esta previsto para acontecer entre
+2018 e 2019.</p>
 
                 </p>
               </div>
@@ -122,57 +120,11 @@ que abastece 7 cidades da Paraiba.</p>
                 <h2>O historico dos niveis de boqueirao</h2>
                 <p class="lead">
                     <p>De tempos em tempos o nordeste passa por um grave problema, a seca. Sao anos de estiagem que
-afetam milhões de pessoas e animais. Durante essa epoca, alguns acudes chagam ao ponto de
-secarem completamente ou ficarem bem próximos disso, que foi o caso do acude de boqueirao,
+afetam milhoes de pessoas e animais. Durante essa epoca, alguns acudes chagam ao ponto de
+secarem completamente ou ficarem bem proximos disso, que foi o caso do acude de boqueirao,
 que abastece 7 cidades da Paraiba.</p>
 
-<p>E baseado nisso, farei algumas análises sobre</p>
-
-<div id="vis" width=300></div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.1/vega-lite.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc7/vega-embed.js"></script>
-<script>
-    const spec = {
-    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
-    "data": {
-        "url": "https://api.insa.gov.br/reservatorios/12172/monitoramento",
-        "format": {
-        "type": "json",
-        "property": "volumes",
-        "parse": {
-            "DataInformacao": "utc:'%d/%m/%Y'"
-                }
-            }
-        },
-
-    "width": 500,
-    "height": 120,
-
-    "mark": {
-        "type": "area",
-        "interpolate": "monotone"
-    },
-    "selection": {
-      "brush": {"type": "interval", "encodings": ["x"]}
-    },
-    "encoding": {
-      "x": {
-        "timeUnit" : "monthyear",
-        "field": "DataInformacao",
-        "type": "temporal",
-        "axis": {"format": "%Y", "title" : "Volume percentual ao longo dos anos"}
-       },
-      "y": {
-        "field": "VolumePercentual",
-        "type": "quantitative",
-        "axis": {"tickCount": 30, "grid": false, "title": "Volume percentual"}
-         }
-       }
-     };
-    vegaEmbed('#vis', spec).catch(console.warn);
-</script>
+<p>E baseado nisso, farei algumas análises sobre o nivel das aguas deste acude.</p>
 
                 </p>
               </div>
