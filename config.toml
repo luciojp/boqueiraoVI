@@ -5,5 +5,5 @@ publishDir = "docs"
 title = "Açude de Boqueirão"
 [params]
   description = "Uma análise sobre os níveis do açude"
-  mainIcon = "/img/novoIcone.png"
+  mainIcon = "/img/novoicone.png"
 
