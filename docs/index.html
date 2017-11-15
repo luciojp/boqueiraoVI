@@ -163,12 +163,34 @@ enchimento do volume de boqueirao. E este fenomeno esta previsto para acontecer 
                 }
             }
         },
-
-    "width": 500,
-  "mark": "line",
+  "mark": "bar",
+  "width": 400,
+ "transform": [
+    {
+      "filter": {
+        "timeUnit": "year",
+        "field": "DataInformacao",
+        "range": [
+          1994,
+          2017
+        ]
+      }
+    },
+    {
+      "filter": {
+        "timeUnit": "month",
+        "field": "DataInformacao",
+        "range": [
+          6,
+          7
+        ]
+      }
+    }
+  ],
+  
 "encoding": {
   "x": {
-    "timeUnit": "yearmonth",
+    "timeUnit": "year",
     "field": "DataInformacao",
     "type": "temporal",
     "axis": {"title": "Anos"}

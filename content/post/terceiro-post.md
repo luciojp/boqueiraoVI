@@ -9,7 +9,6 @@ weight = 0.2
 +++
 
 
-
 <div id="vis" width=300></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js"></script>
@@ -28,12 +27,34 @@ weight = 0.2
                 }
             }
         },
-
-    "width": 500,
-  "mark": "line",
+  "mark": "bar",
+  "width": 400,
+ "transform": [
+    {
+      "filter": {
+        "timeUnit": "year",
+        "field": "DataInformacao",
+        "range": [
+          1994,
+          2017
+        ]
+      }
+    },
+    {
+      "filter": {
+        "timeUnit": "month",
+        "field": "DataInformacao",
+        "range": [
+          6,
+          7
+        ]
+      }
+    }
+  ],
+  
 "encoding": {
   "x": {
-    "timeUnit": "yearmonth",
+    "timeUnit": "year",
     "field": "DataInformacao",
     "type": "temporal",
     "axis": {"title": "Anos"}
@@ -48,6 +69,7 @@ weight = 0.2
 };
   	vegaEmbed('#vis', spec).catch(console.warn);
 </script>
+
 
 
 Nao eh possivel observar semelhancas nos nivel da agua nos meses de junho e julho (epoca do Sao Joao) .
