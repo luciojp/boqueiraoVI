@@ -22,6 +22,15 @@ E baseado nisso, farei algumas analises sobre o nivel das aguas deste acude.</de
     </item>
     
     <item>
+      <title>Quarto Post</title>
+      <link>https://luciojp.github.io/boqueiraoVI/post/quarto-post/</link>
+      <pubDate>Wed, 15 Nov 2017 20:10:57 -0300</pubDate>
+      
+      <guid>https://luciojp.github.io/boqueiraoVI/post/quarto-post/</guid>
+      <description>const spec = { &#34;$schema&#34;: &#34;https://vega.github.io/schema/vega-lite/v3.0.json&#34;, &#34;data&#34;: { &#34;url&#34;: &#34;https://api.insa.gov.br/reservatorios/12172/monitoramento&#34;, &#34;format&#34;: { &#34;type&#34;: &#34;json&#34;, &#34;property&#34;: &#34;volumes&#34;, &#34;parse&#34;: { &#34;DataInformacao&#34;: &#34;utc:&#39;%d/%m/%Y&#39;&#34; } } }, &#34;mark&#34;: &#34;bar&#34;, &#34;width&#34;: 400, &#34;transform&#34;: [ { &#34;filter&#34;: { &#34;timeUnit&#34;: &#34;year&#34;, &#34;field&#34;: &#34;DataInformacao&#34;, &#34;range&#34;: [ 1994, 2017 ] } }, { &#34;filter&#34;: { &#34;timeUnit&#34;: &#34;month&#34;, &#34;field&#34;: &#34;DataInformacao&#34;, &#34;range&#34;: [ 6, 7 ] } } ], &#34;encoding&#34;: { &#34;x&#34;: { &#34;timeUnit&#34;: &#34;year&#34;, &#34;field&#34;: &#34;</description>
+    </item>
+    
+    <item>
       <title>Observando o historico de boqueirao,eh possivel inferir um certo ciclo no nivel das aguas? Se sim, quando deve voltar a subir?</title>
       <link>https://luciojp.github.io/boqueiraoVI/post/segundo-post/</link>
       <pubDate>Mon, 13 Oct 2014 20:07:30 +0000</pubDate>
