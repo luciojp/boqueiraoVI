@@ -2,8 +2,8 @@ baseurl = "https://luciojp.github.io/boqueiraoVI/"
 languageCode = "pt-br"
 theme = "hugo-base-theme"
 publishDir = "docs"
-title = "Açude de Boqueirão"
+title = "Acude de Boqueirao"
 [params]
-  description = "Uma análise sobre os níveis do açude"
+  description = "Uma analise sobre os niveis do acude"
   mainIcon = "/img/novoicone.png"
 
