@@ -1,6 +1,6 @@
 +++
-charset = "UTF-8"
-date = 2014-10-13T20:07:25Z
+
+date = 2014-10-13T20:07:15Z
 draft = false
 title = "Eh possivel observar alguma semelhanca no nivel das aguas de boqueirao no mes de junho?"
 
@@ -16,7 +16,7 @@ weight = 0.2
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc7/vega-embed.js"></script>
 <script>
     const spec = {
-    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.0.json",
     "data": {
         "url": "https://api.insa.gov.br/reservatorios/12172/monitoramento",
         "format": {
