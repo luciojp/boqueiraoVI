@@ -1,4 +1,4 @@
-baseurl = "https://www.example.com"
+baseurl = "https://luciojp.github.io/boqueiraoVI/"
 languageCode = "fr-fr"
 theme = "hugo-base-theme"
 publishDir = "docs"
