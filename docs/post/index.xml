@@ -22,6 +22,18 @@ E baseado nisso, farei algumas analises sobre o nivel das aguas deste acude.</de
     </item>
     
     <item>
+      <title>Lab 02 Parte 02</title>
+      <link>https://luciojp.github.io/boqueiraoVI/post/quarto-post/</link>
+      <pubDate>Mon, 13 Oct 2014 20:07:10 +0000</pubDate>
+      
+      <guid>https://luciojp.github.io/boqueiraoVI/post/quarto-post/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt;  Barras simples  
+ Volume m�ximo e m�nimo do A�ude Epit�cio Pessoa, por m�s   
+ .mychart circle { fill: yellow; } .mychart circle:hover { fill: lemonchiffon; } .mychart text { font: 12px sans-serif; text-anchor: left; } 
+&amp;ldquo;use strict&amp;rdquo; function desenhaGrafico(dados) { // definicoes de altura e largura do svg e da vis dentro var alturaSVG = 600, larguraSVG = 2000; var margin = {top: 10, right: 20, bottom:30, left: 100}, // para descolar a vis das bordas do grafico larguraVis = larguraSVG - margin.</description>
+    </item>
+    
+    <item>
       <title>Observando o historico de boqueirao,eh possivel inferir um certo ciclo no nivel das aguas? Se sim, quando deve voltar a subir?</title>
       <link>https://luciojp.github.io/boqueiraoVI/post/segundo-post/</link>
       <pubDate>Mon, 13 Oct 2014 20:07:30 +0000</pubDate>

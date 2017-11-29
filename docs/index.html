@@ -73,6 +73,126 @@ que abastece 7 cidades da Paraiba.</p>
             <div class="row">
               <div class="col-md-6 col-md-offset-3 text-center">
                 
+                <h2>Lab 02 Parte 02</h2>
+                <p class="lead">
+                    <p>&lt;!DOCTYPE html&gt;
+<html lang="pt-br"></p>
+
+<p><head>
+  <meta charset="utf-8">
+  <title>Barras simples</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head></p>
+
+<p><body>
+  <div class="container">
+    <div class="row">
+      <h2>Volume máximo e mínimo do Açude Epitácio Pessoa, por mês</h2>
+    </div>
+    <div class="row mychart" id="chart">
+    </div>
+  </div></p>
+
+<p><style>
+    .mychart circle {
+      fill: yellow;
+    }
+    .mychart circle:hover {
+      fill: lemonchiffon;
+    }
+    .mychart text {
+      font: 12px sans-serif;
+      text-anchor: left;
+    }
+  </style></p>
+
+<p><script type="text/javascript">
+    &ldquo;use strict&rdquo;
+    function desenhaGrafico(dados) {
+     // definicoes de altura e largura do svg e da vis dentro
+      var alturaSVG = 600, larguraSVG = 2000;
+      var   margin = {top: 10, right: 20, bottom:30, left: 100}, // para descolar a vis das bordas do grafico
+          larguraVis = larguraSVG - margin.left - margin.right,
+          alturaVis = alturaSVG - margin.top - margin.bottom;
+      /*
+       * Prepara onde adicionaremos a visualizacao
+       <em>/
+      var grafico = d3.select(&lsquo;#chart&rsquo;) // cria elemento <svg> com um <g> dentro
+        .append(&lsquo;svg&rsquo;)
+          .attr(&lsquo;width&rsquo;, larguraVis + margin.left + margin.right)
+          .attr(&lsquo;height&rsquo;, alturaVis + margin.top + margin.bottom)
+        .append(&lsquo;g&rsquo;) // para entender o <g> v? em x03-detalhes-svg.html
+          .attr(&lsquo;transform&rsquo;, &lsquo;translate(&rsquo; +  margin.left + &lsquo;,&rsquo; + margin.top + &lsquo;)&rsquo;);
+      /</em>
+       * As escalas
+       <em>/
+      var maxAltura = d3.max(dados, (d, i) =&gt; d.noventa_percentil) + 10;
+      var x = d3.scaleBand()
+                .domain(dados.map(function(d) { return d.mes; }))
+                .range([0,larguraVis])
+                .padding(.10);
+      var y = d3.scaleLinear()
+                .domain([60, maxAltura])
+                .range([alturaVis,0]);
+      /</em>
+       * As marcas
+       <em>/
+      grafico.selectAll(&lsquo;g&rsquo;)
+              .data(dados)
+              .enter()
+                .append(&lsquo;circle&rsquo;)
+                  .attr(&lsquo;r&rsquo;, d =&gt; d.noventa_percentil)
+                  .attr(&lsquo;cx&rsquo;, d =&gt; x(d.mes))
+                  .attr(&lsquo;cy&rsquo;, d =&gt; y(d.noventa_percentil));
+     grafico.selectAll(&lsquo;g&rsquo;)
+          .data(dados)
+          .enter()
+          .append(&lsquo;circle&rsquo;)
+          .attr(&lsquo;r&rsquo;, d =&gt; d.dez_percentil)
+          .attr(&lsquo;cx&rsquo;, d =&gt; x(d.mes))
+          .attr(&lsquo;cy&rsquo;, d =&gt; y(d.noventa_percentil))
+          .style(&lsquo;fill&rsquo;, &lsquo;#3393FF&rsquo;);
+       /</em>
+       * Os eixos
+       */
+      grafico.append(&ldquo;g&rdquo;)
+              .attr(&ldquo;class&rdquo;, &ldquo;x axis&rdquo;)
+              .attr(&ldquo;transform&rdquo;, &ldquo;translate(0,&rdquo; + alturaVis + &ldquo;)&rdquo;)
+              .call(d3.axisBottom(x)); // magica do d3: gera eixo a partir da escala
+      grafico.append(&lsquo;g&rsquo;)
+              .attr(&lsquo;transform&rsquo;, &lsquo;translate(0,0)&rsquo;)
+              .call(d3.axisLeft(y))  // gera eixo a partir da escala
+      grafico.append(&ldquo;text&rdquo;)
+        .attr(&ldquo;transform&rdquo;, &ldquo;translate(-30,&rdquo; + (alturaVis + margin.top)/2 + &ldquo;) rotate(-90)&rdquo;)
+        .text(&ldquo;Volume (%)&rdquo;);
+    }
+    var dados = &ldquo;dados/boqueirao-por-mes.json&rdquo;;
+    d3.json(dados, function(dados) {
+      desenhaGrafico(dados);
+    });
+  </script>
+</body></p>
+
+<p></html></p>
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      
+      
+    
+
+    <div id="main">
+        
+        <div id="intro" class="counterpoint">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3 text-center">
+                
                 <h2>Observando o historico de boqueirao,eh possivel inferir um certo ciclo no nivel das aguas? Se sim, quando deve voltar a subir?</h2>
                 <p class="lead">
                     <div id="vis" width=300></div>
@@ -138,7 +258,7 @@ enchimento do volume de boqueirao. E este fenomeno esta previsto para acontecer 
 
     <div id="main">
         
-        <div id="intro" class="counterpoint">
+        <div id="intro" class="point">
           <div class="container">
             <div class="row">
               <div class="col-md-6 col-md-offset-3 text-center">
